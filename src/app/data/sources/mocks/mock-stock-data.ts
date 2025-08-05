@@ -121,4 +121,4 @@ export const MOCK_STOCK_DATA: StockData[] = [
     volume: 5890,
     isActive: true
   }
-]; 
+];

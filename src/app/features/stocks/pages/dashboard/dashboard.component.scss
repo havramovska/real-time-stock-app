@@ -2,8 +2,9 @@
 
 .dashboard {
   min-height: 100vh;
-  background-color: $gray-50;
+  background-color: var(--background-color);
   padding: $spacing-xl 0;
+  transition: background-color 0.3s ease;
 }
 
 .dashboard-header {
@@ -18,8 +19,9 @@
 .dashboard-title {
   font-size: $font-size-4xl;
   font-weight: $font-weight-bold;
-  color: $black;
+  color: var(--text-color);
   margin-bottom: $spacing-sm;
+  transition: color 0.3s ease;
   
   @media (max-width: #{$breakpoint-sm - 1px}) {
     font-size: $font-size-3xl;
@@ -28,8 +30,9 @@
 
 .dashboard-subtitle {
   font-size: $font-size-lg;
-  color: $gray-600;
+  color: var(--text-secondary);
   margin: 0;
+  transition: color 0.3s ease;
   
   @media (max-width: #{$breakpoint-sm - 1px}) {
     font-size: $font-size-base;

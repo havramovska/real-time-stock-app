@@ -1,1 +1,35 @@
-<p>stock-card works!</p>
+<div class="stock-card" [class]="stock | cardClass">
+  <div class="card-header">
+    <div class="stock-info">
+      <h3 class="stock-symbol">{{ stock.symbol }}</h3>
+      <p class="stock-name">{{ stock.name }}</p>
+    </div>
+    <app-toggle-button 
+      [isActive]="stock.isActive"
+      (toggleChange)="onToggleChange($event)">
+    </app-toggle-button>
+  </div>
+
+  <div class="card-body">
+    <div class="price-section">
+      <div class="current-price">
+        {{ stock.currentPrice | formatPrice }}
+      </div>
+      <div class="price-change" [class]="stock.priceChange | priceChangeClass">
+        <span class="change-amount">{{ stock.priceChange | formatPriceChange }}</span>
+        <span class="change-percentage">{{ stock.percentageChange | formatPercentage }}</span>
+      </div>
+    </div>
+
+    <div class="trading-info">
+      <div class="info-item">
+        <span class="info-label">Last Trade</span>
+        <span class="info-value">{{ stock.lastTradeTime }}</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Volume</span>
+        <span class="info-value">{{ stock.volume | formatVolume }}</span>
+      </div>
+    </div>
+  </div>
+</div>

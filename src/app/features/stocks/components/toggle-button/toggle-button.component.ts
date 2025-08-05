@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-toggle-button',
-  imports: [],
+  standalone: true,
   templateUrl: './toggle-button.component.html',
-  styleUrl: './toggle-button.component.scss'
+  styleUrls: ['./toggle-button.component.scss']
 })
 export class ToggleButtonComponent {
+  @Input() isActive: boolean = false;
+  @Input() disabled: boolean = false;
+  @Output() toggleChange = new EventEmitter<boolean>();
 
+  onToggle() {
+    if (!this.disabled) {
+      this.isActive = !this.isActive;
+      this.toggleChange.emit(this.isActive);
+    }
+  }
 }

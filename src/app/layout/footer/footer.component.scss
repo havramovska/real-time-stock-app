@@ -1,0 +1,23 @@
+@use '../../../assets/styles/variables' as *;
+
+.footer {
+  background-color: $white;
+  border-top: 1px solid $gray-200;
+  padding: $spacing-xl 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-copyright {
+  p {
+    margin: 0;
+    color: $gray-600;
+    font-size: $font-size-sm;
+  }
+} 

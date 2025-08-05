@@ -1,0 +1,117 @@
+@use 'variables' as *;
+@use 'card-variables' as *;
+
+@mixin card-base {
+  background-color: $card-bg-color;
+  border-radius: $card-border-radius;
+  padding: $card-padding;
+  box-shadow: $card-shadow;
+  transition: $card-transition;
+  border: 2px solid $card-border-color;
+  height: 100%;
+  display: $card-display;
+  flex-direction: $card-flex-direction;
+}
+
+@mixin card-hover {
+  box-shadow: $card-shadow-hover;
+  transform: $card-hover-transform;
+}
+
+@mixin card-positive {
+  border-color: $card-positive-border;
+  background: $card-positive-bg;
+}
+
+@mixin card-negative {
+  border-color: $card-negative-border;
+  background: $card-negative-bg;
+}
+
+@mixin card-neutral {
+  border-color: $card-neutral-border;
+  background: $card-neutral-bg;
+}
+
+@mixin card-inactive {
+  background-color: $card-inactive-bg;
+  border-color: $card-inactive-border;
+  opacity: $card-inactive-opacity;
+}
+
+@mixin card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $card-gap;
+  flex-shrink: $card-header-flex-shrink;
+}
+
+@mixin card-body {
+  display: flex;
+  flex-direction: column;
+  gap: $card-body-gap;
+  flex: $card-body-flex;
+}
+
+@mixin card-info {
+  display: flex;
+  flex-direction: column;
+  gap: $card-info-gap;
+  padding-top: $spacing-md;
+  border-top: 1px solid $gray-200;
+  margin-top: $card-info-margin-top;
+}
+
+@mixin card-title {
+  font-size: $card-title-font-size;
+  font-weight: $card-title-font-weight;
+  color: $black;
+  margin: 0 0 $spacing-xs 0;
+  line-height: 1.2;
+}
+
+@mixin card-subtitle {
+  font-size: $card-subtitle-font-size;
+  color: $card-subtitle-color;
+  margin: 0;
+  line-height: 1.3;
+}
+
+@mixin card-price {
+  font-size: $card-price-font-size;
+  font-weight: $card-price-font-weight;
+  color: $black;
+  line-height: 1.2;
+}
+
+@mixin card-change {
+  font-size: $card-change-font-size;
+  font-weight: $card-change-font-weight;
+}
+
+@mixin card-percentage {
+  font-size: $card-percentage-font-size;
+  font-weight: $card-percentage-font-weight;
+}
+
+@mixin card-info-label {
+  font-size: $card-info-label-font-size;
+  color: $card-info-label-color;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@mixin card-info-value {
+  font-size: $card-info-value-font-size;
+  font-weight: $font-weight-medium;
+  color: $card-info-value-color;
+  font-family: $font-family-mono;
+}
+
+@mixin card-responsive {
+  @media (max-width: #{$card-mobile-breakpoint - 1px}) {
+    padding: $card-padding-mobile;
+  }
+} 

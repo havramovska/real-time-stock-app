@@ -1,0 +1,38 @@
+@use '../../../assets/styles/variables' as *;
+
+.header {
+  background-color: $white;
+  border-bottom: 1px solid $gray-200;
+  box-shadow: $shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: $z-index-sticky;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-md 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  text-decoration: none;
+  color: $primary-color;
+  
+  &:hover {
+    color: $primary-dark;
+  }
+}
+.logo-text {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $primary-color;
+  
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    font-size: $font-size-lg;
+  }
+} 

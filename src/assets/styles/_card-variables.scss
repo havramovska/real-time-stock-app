@@ -1,0 +1,49 @@
+$card-bg-color: #FFFFFF;
+$card-border-color: transparent;
+$card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+$card-positive-border: #4CAF50;
+$card-positive-bg: linear-gradient(135deg, #C8E6C9 0%, #FFFFFF 100%);
+$card-negative-border: #F44336;
+$card-negative-bg: linear-gradient(135deg, #FFCDD2 0%, #FFFFFF 100%);
+$card-neutral-border: #9E9E9E;
+$card-neutral-bg: linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%);
+$card-inactive-bg: #F5F5F5;
+$card-inactive-border: #E0E0E0;
+$card-inactive-opacity: 0.7;
+
+$card-title-font-size: 1.25rem;
+$card-title-font-weight: 600;
+$card-subtitle-font-size: 0.875rem;
+$card-subtitle-color: #757575;
+$card-price-font-size: 1.5rem;
+$card-price-font-weight: 700;
+$card-change-font-size: 1.125rem;
+$card-change-font-weight: 600;
+$card-percentage-font-size: 0.875rem;
+$card-percentage-font-weight: 500;
+$card-info-label-font-size: 0.75rem;
+$card-info-label-color: #9E9E9E;
+$card-info-value-font-size: 0.875rem;
+$card-info-value-color: #616161;
+
+$card-padding: 1.5rem;
+$card-padding-mobile: 1rem;
+$card-border-radius: 0.75rem;
+$card-gap: 1.5rem;
+$card-header-gap: 0.5rem;
+$card-body-gap: 1.5rem;
+$card-info-gap: 1rem;
+
+$card-transition: 250ms ease-in-out;
+$card-hover-transform: translateY(-2px);
+
+$card-min-height: auto;
+$card-display: flex;
+$card-flex-direction: column;
+$card-header-flex-shrink: 0;
+$card-body-flex: 1;
+$card-info-margin-top: auto;
+
+$card-mobile-breakpoint: 640px; 

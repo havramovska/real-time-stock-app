@@ -16,7 +16,11 @@ export class ApiToDomainMapper {
       open: apiQuote.currentPrice,
       high: apiQuote.currentPrice,
       low: apiQuote.currentPrice,
-      lastUpdated: new Date(apiQuote.timestamp)
+      lastUpdated: new Date(apiQuote.timestamp),
+      dailyHigh: apiQuote.dailyHigh,
+      dailyLow: apiQuote.dailyLow,
+      weekHigh52: apiQuote.weekHigh52,
+      weekLow52: apiQuote.weekLow52
     };
   }
 } 

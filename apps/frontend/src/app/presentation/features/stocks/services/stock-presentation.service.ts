@@ -33,7 +33,11 @@ export class StockPresentationService implements OnDestroy {
           open: stock.currentPrice,
           high: stock.currentPrice,
           low: stock.currentPrice,
-          lastUpdated: new Date(stock.lastTradeTime)
+          lastUpdated: new Date(stock.lastTradeTime),
+          dailyHigh: stock.dailyHigh,
+          dailyLow: stock.dailyLow,
+          weekHigh52: stock.weekHigh52,
+          weekLow52: stock.weekLow52
         }));
 
         this.stockStateService.setStocks(stockQuotes);

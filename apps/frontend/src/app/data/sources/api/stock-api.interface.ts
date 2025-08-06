@@ -7,6 +7,10 @@ export interface StockApiResponse {
   priceChange: number;
   percentageChange: number;
   timestamp: number;
+  dailyHigh: number;
+  dailyLow: number;
+  weekHigh52: number;
+  weekLow52: number;
 }
 
 export interface StockApiService {

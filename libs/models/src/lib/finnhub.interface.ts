@@ -7,6 +7,8 @@ export interface FinnhubQuoteResponse {
   o: number;
   pc: number;
   t: number;
+  weekHigh52?: number;
+  weekLow52?: number;
 }
 
 export interface FinnhubSymbol {

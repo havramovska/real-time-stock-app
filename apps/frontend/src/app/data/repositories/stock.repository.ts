@@ -92,7 +92,11 @@ export class StockRepository implements IStockRepository {
         open: stockData.currentPrice,
         high: stockData.currentPrice,
         low: stockData.currentPrice,
-        lastUpdated: new Date()
+        lastUpdated: new Date(),
+        dailyHigh: stockData.dailyHigh,
+        dailyLow: stockData.dailyLow,
+        weekHigh52: stockData.weekHigh52,
+        weekLow52: stockData.weekLow52
       });
     }
 
@@ -109,7 +113,11 @@ export class StockRepository implements IStockRepository {
         open: stockData.currentPrice,
         high: stockData.currentPrice,
         low: stockData.currentPrice,
-        lastUpdated: new Date()
+        lastUpdated: new Date(),
+        dailyHigh: stockData.dailyHigh,
+        dailyLow: stockData.dailyLow,
+        weekHigh52: stockData.weekHigh52,
+        weekLow52: stockData.weekLow52
       });
     }
 
@@ -130,7 +138,11 @@ export class StockRepository implements IStockRepository {
             open: stockData.currentPrice,
             high: stockData.currentPrice,
             low: stockData.currentPrice,
-            lastUpdated: new Date()
+            lastUpdated: new Date(),
+            dailyHigh: stockData.dailyHigh,
+            dailyLow: stockData.dailyLow,
+            weekHigh52: stockData.weekHigh52,
+            weekLow52: stockData.weekLow52
           });
         })
       );

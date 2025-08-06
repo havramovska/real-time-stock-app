@@ -14,6 +14,10 @@ export class StockPresentationAdapter {
       priceChange: stock.change,
       percentageChange: stock.changePercent,
       lastTradeTime: stock.lastUpdated.toISOString(),
+      dailyHigh: stock.dailyHigh || 0,
+      dailyLow: stock.dailyLow || 0,
+      weekHigh52: stock.weekHigh52 || 0,
+      weekLow52: stock.weekLow52 || 0,
       isActive: activeStocks.has(stock.symbol)
     };
   }

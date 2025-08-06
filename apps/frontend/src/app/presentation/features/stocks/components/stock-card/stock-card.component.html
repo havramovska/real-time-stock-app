@@ -22,6 +22,38 @@
     </div>
 
     <div class="trading-info">
+      <!-- Mobile view data -->
+      <div class="mobile-data">
+        <div class="info-item">
+          <span class="info-label">Daily High</span>
+          <span class="info-value">{{ stock.dailyHigh | formatPrice }}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Daily Low</span>
+          <span class="info-value">{{ stock.dailyLow | formatPrice }}</span>
+        </div>
+      </div>
+
+      <!-- Desktop view data -->
+      <div class="desktop-data">
+        <div class="info-item">
+          <span class="info-label">Daily High</span>
+          <span class="info-value">{{ stock.dailyHigh | formatPrice }}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Daily Low</span>
+          <span class="info-value">{{ stock.dailyLow | formatPrice }}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">52W High</span>
+          <span class="info-value">{{ stock.weekHigh52 | formatPrice }}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">52W Low</span>
+          <span class="info-value">{{ stock.weekLow52 | formatPrice }}</span>
+        </div>
+      </div>
+
       <div class="info-item">
         <span class="info-label">Last Trade</span>
         <span class="info-value">{{ stock.lastTradeTime | formatTradeTime }}</span>

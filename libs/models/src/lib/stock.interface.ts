@@ -5,6 +5,10 @@ export interface Stock {
   priceChange: number;
   percentageChange: number;
   lastTradeTime: string;
+  dailyHigh: number;
+  dailyLow: number;
+  weekHigh52: number;
+  weekLow52: number;
 }
 
 export interface StockWithUIState extends Stock {

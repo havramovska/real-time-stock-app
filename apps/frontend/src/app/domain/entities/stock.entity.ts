@@ -8,6 +8,10 @@ export interface StockEntity {
   high: number;
   low: number;
   lastUpdated: Date;
+  dailyHigh: number;
+  dailyLow: number;
+  weekHigh52: number;
+  weekLow52: number;
 }
 
 export interface StockQuote {
@@ -20,4 +24,8 @@ export interface StockQuote {
   high: number;
   low: number;
   lastUpdated: Date;
+  dailyHigh: number;
+  dailyLow: number;
+  weekHigh52: number;
+  weekLow52: number;
 } 

@@ -8,6 +8,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 12.56,
     percentageChange: 34.08,
     lastTradeTime: '6:53:07pm',
+    dailyHigh: 38.20,
+    dailyLow: 35.10,
+    weekHigh52: 45.30,
+    weekLow52: 28.50,
     isActive: true
   },
   {
@@ -17,6 +21,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 1.64,
     percentageChange: 36.61,
     lastTradeTime: '6:52:49pm',
+    dailyHigh: 4.65,
+    dailyLow: 4.20,
+    weekHigh52: 5.20,
+    weekLow52: 3.80,
     isActive: false
   },
   {
@@ -26,6 +34,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 4.73,
     percentageChange: 12.29,
     lastTradeTime: '6:53:07pm',
+    dailyHigh: 39.10,
+    dailyLow: 37.80,
+    weekHigh52: 42.50,
+    weekLow52: 35.20,
     isActive: true
   },
   {
@@ -35,6 +47,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: -5.74,
     percentageChange: -20.45,
     lastTradeTime: '6:53:07pm',
+    dailyHigh: 30.20,
+    dailyLow: 27.50,
+    weekHigh52: 35.80,
+    weekLow52: 25.40,
     isActive: true
   },
   {
@@ -44,6 +60,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 3.99,
     percentageChange: 20.23,
     lastTradeTime: '6:53:06pm',
+    dailyHigh: 20.10,
+    dailyLow: 18.90,
+    weekHigh52: 22.50,
+    weekLow52: 16.80,
     isActive: true
   },
   {
@@ -53,6 +73,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: -0.84,
     percentageChange: -0.82,
     lastTradeTime: '6:52:52pm',
+    dailyHigh: 103.50,
+    dailyLow: 100.20,
+    weekHigh52: 120.80,
+    weekLow52: 95.40,
     isActive: false
   },
   {
@@ -62,6 +86,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: -38.78,
     percentageChange: -9.62,
     lastTradeTime: '6:53:07pm',
+    dailyHigh: 420.50,
+    dailyLow: 400.10,
+    weekHigh52: 450.30,
+    weekLow52: 380.20,
     isActive: true
   },
   {
@@ -71,6 +99,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 8.42,
     percentageChange: 23.75,
     lastTradeTime: '6:53:06pm',
+    dailyHigh: 36.20,
+    dailyLow: 34.80,
+    weekHigh52: 38.50,
+    weekLow52: 32.10,
     isActive: true
   },
   {
@@ -80,6 +112,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 22.15,
     percentageChange: 38.31,
     lastTradeTime: '6:52:46pm',
+    dailyHigh: 58.90,
+    dailyLow: 56.40,
+    weekHigh52: 62.30,
+    weekLow52: 54.20,
     isActive: false
   },
   {
@@ -89,6 +125,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 7.38,
     percentageChange: 4.14,
     lastTradeTime: '6:53:07pm',
+    dailyHigh: 180.20,
+    dailyLow: 176.50,
+    weekHigh52: 185.40,
+    weekLow52: 170.80,
     isActive: true
   },
   {
@@ -98,6 +138,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 137.19,
     percentageChange: 13.49,
     lastTradeTime: '6:53:07pm',
+    dailyHigh: 1020.50,
+    dailyLow: 1005.20,
+    weekHigh52: 1050.30,
+    weekLow52: 980.40,
     isActive: true
   },
   {
@@ -107,6 +151,10 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 2.35,
     percentageChange: 9.05,
     lastTradeTime: '6:53:07pm',
+    dailyHigh: 26.40,
+    dailyLow: 25.20,
+    weekHigh52: 28.50,
+    weekLow52: 24.10,
     isActive: true
   }
 ];

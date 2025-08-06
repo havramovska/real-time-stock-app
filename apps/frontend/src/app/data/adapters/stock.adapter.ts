@@ -21,7 +21,11 @@ export class StockAdapter {
       currentPrice: apiResponse.currentPrice,
       priceChange: apiResponse.priceChange,
       percentageChange: apiResponse.percentageChange,
-      lastTradeTime: timestamp.toISOString()
+      lastTradeTime: timestamp.toISOString(),
+      dailyHigh: apiResponse.dailyHigh,
+      dailyLow: apiResponse.dailyLow,
+      weekHigh52: apiResponse.weekHigh52,
+      weekLow52: apiResponse.weekLow52
     };
   }
 
@@ -56,7 +60,11 @@ export class StockAdapter {
       currentPrice: apiResponse.currentPrice,
       priceChange: apiResponse.priceChange,
       percentageChange: apiResponse.percentageChange,
-      lastTradeTime: timestamp.toISOString()
+      lastTradeTime: timestamp.toISOString(),
+      dailyHigh: apiResponse.dailyHigh,
+      dailyLow: apiResponse.dailyLow,
+      weekHigh52: apiResponse.weekHigh52,
+      weekLow52: apiResponse.weekLow52
     };
   }
 } 

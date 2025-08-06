@@ -2,15 +2,19 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class LoggerService {
-  log(message: any): void {
-    console.log('[LOG]', message);
+  log(...args: any[]): void {
+    console.log('[LOG]', ...args);
   }
 
-  error(message: any): void {
-    console.error('[ERROR]', message);
+  error(...args: any[]): void {
+    console.error('[ERROR]', ...args);
   }
 
-  warn(message: any): void {
-    console.warn('[WARN]', message);
+  warn(...args: any[]): void {
+    console.warn('[WARN]', ...args);
+  }
+
+  info(...args: any[]): void {
+    console.info('[INFO]', ...args);
   }
 }

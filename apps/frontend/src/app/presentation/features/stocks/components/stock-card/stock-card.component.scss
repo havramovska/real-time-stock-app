@@ -1,0 +1,149 @@
+@use 'variables' as *;
+@use 'card-variables' as *;
+@use 'card-mixins' as *;
+
+.stock-card {
+  @include card-base;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  min-width: 0;
+  
+  &:hover {
+    @include card-hover;
+  }
+  
+  &.positive {
+    @include card-positive;
+  }
+  
+  &.negative {
+    @include card-negative;
+  }
+  
+  &.neutral {
+    @include card-neutral;
+  }
+  
+  &.inactive {
+    @include card-inactive;
+    
+    .stock-symbol,
+    .stock-name,
+    .current-price,
+    .info-value {
+      color: $gray-600;
+    }
+    
+    .price-change {
+      color: $gray-500;
+    }
+  }
+}
+
+.card-header {
+  @include card-header;
+}
+
+.stock-info {
+  flex: 1;
+}
+
+.stock-symbol {
+  @include card-title;
+}
+
+.stock-name {
+  @include card-subtitle;
+}
+
+.card-body {
+  @include card-body;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.current-price {
+  @include card-price;
+}
+
+.price-change {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  
+  &.positive {
+    color: $success-color;
+  }
+  
+  &.negative {
+    color: $danger-color;
+  }
+  
+  &.neutral {
+    color: $neutral-color;
+  }
+}
+
+.change-amount {
+  @include card-change;
+}
+
+.change-percentage {
+  @include card-percentage;
+}
+
+.trading-info {
+  @include card-info;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 1.5rem;
+  gap: $spacing-sm;
+}
+
+.info-label {
+  @include card-info-label;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.info-value {
+  @include card-info-value;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+
+.toggle-section {
+  @include card-toggle;
+}
+
+@media (max-width: #{$card-mobile-breakpoint - 1px}) {
+  .stock-card {
+    @include card-responsive;
+  }
+  
+  .current-price {
+    font-size: $font-size-xl;
+  }
+  
+  .change-amount {
+    font-size: $font-size-base;
+  }
+  
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    align-items: flex-start;
+  }
+}

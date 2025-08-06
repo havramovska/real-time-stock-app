@@ -8,8 +8,10 @@
   box-shadow: $card-shadow;
   border: 2px solid $card-border-color;
   height: 100%;
+  width: 100%;
   display: $card-display;
   flex-direction: $card-flex-direction;
+  box-sizing: border-box;
 }
 
 @mixin card-hover {
@@ -107,6 +109,13 @@
   font-weight: $font-weight-medium;
   color: $card-info-value-color;
   font-family: $font-family-mono;
+}
+
+@mixin card-toggle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: $spacing-sm;
 }
 
 @mixin card-responsive {

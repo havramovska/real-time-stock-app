@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .dashboard {
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);
   padding: $spacing-lg;
   background-color: $bg-color;
   color: $text-color;

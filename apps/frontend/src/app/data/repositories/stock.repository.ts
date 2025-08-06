@@ -92,7 +92,6 @@ export class StockRepository implements IStockRepository {
         open: stockData.currentPrice,
         high: stockData.currentPrice,
         low: stockData.currentPrice,
-        volume: stockData.volume,
         lastUpdated: new Date()
       });
     }
@@ -110,7 +109,6 @@ export class StockRepository implements IStockRepository {
         open: stockData.currentPrice,
         high: stockData.currentPrice,
         low: stockData.currentPrice,
-        volume: stockData.volume,
         lastUpdated: new Date()
       });
     }
@@ -132,7 +130,6 @@ export class StockRepository implements IStockRepository {
             open: stockData.currentPrice,
             high: stockData.currentPrice,
             low: stockData.currentPrice,
-            volume: stockData.volume,
             lastUpdated: new Date()
           });
         })

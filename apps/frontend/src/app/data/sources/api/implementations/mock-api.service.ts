@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { StockApiService, StockApiResponse } from '../stock-api.interface';
+import { StockApiService, StockApiResponse, StockSymbol } from '../stock-api.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -70,11 +70,11 @@ export class MockApiService implements StockApiService {
     return of(quotes).pipe(delay(200));
   }
 
-  getSymbols(exchange: string = 'US'): Observable<any[]> {
+  getSymbols(exchange: string = 'US'): Observable<StockSymbol[]> {
     return of(this.mockData.map(stock => ({
       symbol: stock.symbol,
-      description: `${stock.symbol} Stock`,
-      type: 'Common Stock'
+      name: `${stock.symbol} Stock`,
+      exchange: exchange
     }))).pipe(delay(100));
   }
 

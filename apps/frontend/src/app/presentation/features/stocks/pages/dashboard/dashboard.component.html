@@ -5,7 +5,18 @@
       <p class="dashboard-subtitle">Real-time stock monitoring and tracking</p>
     </div>
 
-    <div class="stocks-grid">
+    <div class="loading-container" *ngIf="loading$ | async">
+      <app-loader></app-loader>
+    </div>
+
+    <div class="error-container" *ngIf="error$ | async as error">
+      <div class="error-message">
+        <h3>Error</h3>
+        <p>{{ error }}</p>
+      </div>
+    </div>
+
+    <div class="stocks-grid" *ngIf="!(loading$ | async) && !(error$ | async)">
       <app-stock-card
         *ngFor="let stock of stocks$ | async"
         [stock]="stock"

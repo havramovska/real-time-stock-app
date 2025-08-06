@@ -66,7 +66,7 @@ export class StockPresentationService implements OnDestroy {
     this.stockWebSocketService.toggleStock(symbol, isActive);
   }
 
-  getState(): Observable<any> {
+  getState(): Observable<{ stocks: StockQuote[]; loading: boolean; error: string | null; selectedSymbols: string[]; activeStocks: Set<string> }> {
     return this.stockStateService.getState();
   }
 
@@ -76,7 +76,7 @@ export class StockPresentationService implements OnDestroy {
     );
   }
 
-  getStocksForUI(): Observable<any[]> {
+  getStocksForUI(): Observable<StockData[]> {
     return this.stockStateService.getState().pipe(
       map(state => {
         return this.stockPresentationAdapter.transformToUIStateList(state.stocks, state.activeStocks);

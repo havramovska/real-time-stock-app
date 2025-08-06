@@ -13,8 +13,14 @@ export interface StockApiResponse {
   weekLow52: number;
 }
 
+export interface StockSymbol {
+  symbol: string;
+  name: string;
+  exchange: string;
+}
+
 export interface StockApiService {
   getQuote(symbol: string): Observable<StockApiResponse>;
   getMultipleQuotes(symbols: string[]): Observable<StockApiResponse[]>;
-  getSymbols(exchange?: string): Observable<any[]>;
+  getSymbols(exchange?: string): Observable<StockSymbol[]>;
 } 

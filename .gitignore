@@ -41,3 +41,14 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# WebSocket Server - exclude only node_modules and logs
+/websocket-server/node_modules/
+/websocket-server/npm-debug.log*
+/websocket-server/yarn-debug.log*
+/websocket-server/yarn-error.log*
+/websocket-server/.env
+/websocket-server/.env.local
+/websocket-server/.env.development.local
+/websocket-server/.env.test.local
+/websocket-server/.env.production.local

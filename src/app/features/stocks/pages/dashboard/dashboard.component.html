@@ -7,7 +7,7 @@
 
     <div class="stocks-grid">
       <app-stock-card
-        *ngFor="let stock of stocks"
+        *ngFor="let stock of stocks$ | async"
         [stock]="stock"
         (toggleChange)="onToggleChange($event)">
       </app-stock-card>

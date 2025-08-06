@@ -7,6 +7,7 @@ import { FormatVolumePipe } from '../../../../shared/pipes/format-volume.pipe';
 import { PriceChangeClassPipe } from '../../../../shared/pipes/price-change-class.pipe';
 import { CardClassPipe } from '../../../../shared/pipes/card-class.pipe';
 import { StockData } from '../../models/stock-data.model';
+import { ToggleEvent } from '../../models/toggle-event.model';
 
 @Component({
   selector: 'app-stock-card',
@@ -25,12 +26,12 @@ import { StockData } from '../../models/stock-data.model';
 })
 export class StockCardComponent {
   @Input() stock!: StockData;
-  @Output() toggleChange = new EventEmitter<{ symbol: string; isActive: boolean }>();
+  @Output() toggleChange = new EventEmitter<ToggleEvent>();
 
-  onToggleChange(isActive: boolean) {
+  onToggleChange(isActive: boolean): void {
     this.toggleChange.emit({ 
       symbol: this.stock.symbol, 
-      isActive: isActive 
+      isActive 
     });
   }
 }

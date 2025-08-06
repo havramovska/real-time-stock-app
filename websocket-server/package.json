@@ -1,0 +1,19 @@
+{
+  "name": "stock-websocket-server",
+  "version": "1.0.0",
+  "description": "WebSocket server for real-time stock price updates",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["websocket", "stocks", "real-time"],
+  "author": "",
+  "license": "MIT"
+} 

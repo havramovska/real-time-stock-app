@@ -1,4 +1,6 @@
-export const environment = {
+import { Environment } from './environment.types';
+
+export const environment: Environment = {
   production: true,
   useMockData: false,
   apiUrl: 'https://finnhub.io/docs/api/introduction',

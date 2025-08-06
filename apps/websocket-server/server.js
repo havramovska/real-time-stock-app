@@ -1,11 +1,13 @@
 const WebSocket = require('ws');
 const http = require('http');
 const https = require('https');
+const config = require('./config');
+const ApiEndpoints = require('./api-endpoints');
 
-const PORT = process.env.PORT || 8080;
-const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY || 'YOUR_FINNHUB_API_KEY';
-
-const STOCK_SYMBOLS = ['AAPL', 'GOOGL', 'MSFT', 'TSLA', 'AMZN', 'META', 'NVDA', 'NFLX'];
+const PORT = config.port;
+const FINNHUB_API_KEY = config.finnhub.apiKey;
+const FINNHUB_BASE_URL = config.finnhub.baseUrl;
+const STOCK_SYMBOLS = config.stockSymbols;
 
 const server = http.createServer();
 const wss = new WebSocket.Server({ server });
@@ -13,8 +15,8 @@ const wss = new WebSocket.Server({ server });
 const stockData = new Map();
 
 async function fetchStockQuote(symbol) {
-  const url = `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${FINNHUB_API_KEY}`;
-  const metricsUrl = `https://finnhub.io/api/v1/stock/metric?symbol=${symbol}&metric=all&token=${FINNHUB_API_KEY}`;
+  const url = `${FINNHUB_BASE_URL}${ApiEndpoints.QUOTE}?symbol=${symbol}&token=${FINNHUB_API_KEY}`;
+  const metricsUrl = `${FINNHUB_BASE_URL}${ApiEndpoints.STOCK_METRIC}?symbol=${symbol}&metric=all&token=${FINNHUB_API_KEY}`;
 
   try {
     const [quoteResponse, metricsResponse] = await Promise.all([
@@ -94,7 +96,7 @@ async function fetchAllStockQuotes() {
   }
 }
 
-setInterval(fetchAllStockQuotes, 5000);
+setInterval(fetchAllStockQuotes, config.updateInterval);
 
 wss.on('connection', (ws) => {
   console.log('Client connected');

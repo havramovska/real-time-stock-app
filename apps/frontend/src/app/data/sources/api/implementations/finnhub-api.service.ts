@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError, forkJoin, of } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import { environment } from '../../../../../environments/environment';
+import { ApiEndpoints } from '../../../../core/constants/api-endpoints.enum';
 import { StockApiService, StockApiResponse, StockSymbol } from '../stock-api.interface';
 import { 
   FinnhubQuoteResponse, 
@@ -19,10 +20,10 @@ export class FinnhubApiService implements StockApiService {
   constructor(private http: HttpClient) {}
 
   getQuote(symbol: string): Observable<StockApiResponse> {
-    const quoteUrl = `${this.baseUrl}/quote`;
+    const quoteUrl = `${this.baseUrl}${ApiEndpoints.QUOTE}`;
     const quoteParams = { symbol, token: this.apiKey };
     
-    const metricsUrl = `${this.baseUrl}/stock/metric`;
+    const metricsUrl = `${this.baseUrl}${ApiEndpoints.STOCK_METRIC}`;
     const metricsParams = { symbol, metric: 'all', token: this.apiKey };
 
     return forkJoin({
@@ -72,7 +73,7 @@ export class FinnhubApiService implements StockApiService {
   }
 
   getSymbols(exchange: string = 'US'): Observable<StockSymbol[]> {
-    const url = `${this.baseUrl}/stock/symbol`;
+    const url = `${this.baseUrl}${ApiEndpoints.STOCK_SYMBOL}`;
     const params = { exchange, token: this.apiKey };
 
     return this.http.get<FinnhubSymbol[]>(url, { params })

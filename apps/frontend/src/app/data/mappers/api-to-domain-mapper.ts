@@ -16,7 +16,6 @@ export class ApiToDomainMapper {
       open: apiQuote.currentPrice,
       high: apiQuote.currentPrice,
       low: apiQuote.currentPrice,
-      volume: apiQuote.volume || 0,
       lastUpdated: new Date(apiQuote.timestamp)
     };
   }

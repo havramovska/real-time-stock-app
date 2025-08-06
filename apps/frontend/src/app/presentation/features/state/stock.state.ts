@@ -7,13 +7,15 @@ export interface StockState {
   loading: boolean;
   error: string | null;
   selectedSymbols: string[];
+  activeStocks: Set<string>;
 }
 
 const initialState: StockState = {
   stocks: [],
   loading: false,
   error: null,
-  selectedSymbols: []
+  selectedSymbols: [],
+  activeStocks: new Set(['AAPL', 'GOOGL', 'MSFT', 'TSLA'])
 };
 
 @Injectable({
@@ -57,6 +59,23 @@ export class StockStateService {
 
   setSelectedSymbols(symbols: string[]): void {
     this.updateState({ selectedSymbols: symbols });
+  }
+
+  toggleStock(symbol: string, isActive: boolean): void {
+    const currentState = this.getCurrentState();
+    const newActiveStocks = new Set(currentState.activeStocks);
+    
+    if (isActive) {
+      newActiveStocks.add(symbol);
+    } else {
+      newActiveStocks.delete(symbol);
+    }
+    
+    this.updateState({ activeStocks: newActiveStocks });
+  }
+
+  isStockActive(symbol: string): boolean {
+    return this.getCurrentState().activeStocks.has(symbol);
   }
 
   clearError(): void {

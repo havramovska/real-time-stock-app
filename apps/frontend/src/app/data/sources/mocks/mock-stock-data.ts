@@ -8,7 +8,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 12.56,
     percentageChange: 34.08,
     lastTradeTime: '6:53:07pm',
-    volume: 8640,
     isActive: true
   },
   {
@@ -18,7 +17,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 1.64,
     percentageChange: 36.61,
     lastTradeTime: '6:52:49pm',
-    volume: 1030,
     isActive: false
   },
   {
@@ -28,7 +26,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 4.73,
     percentageChange: 12.29,
     lastTradeTime: '6:53:07pm',
-    volume: 6290,
     isActive: true
   },
   {
@@ -38,7 +35,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: -5.74,
     percentageChange: -20.45,
     lastTradeTime: '6:53:07pm',
-    volume: 2100,
     isActive: true
   },
   {
@@ -48,7 +44,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 3.99,
     percentageChange: 20.23,
     lastTradeTime: '6:53:06pm',
-    volume: 9550,
     isActive: true
   },
   {
@@ -58,7 +53,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: -0.84,
     percentageChange: -0.82,
     lastTradeTime: '6:52:52pm',
-    volume: 8700,
     isActive: false
   },
   {
@@ -68,7 +62,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: -38.78,
     percentageChange: -9.62,
     lastTradeTime: '6:53:07pm',
-    volume: 1100,
     isActive: true
   },
   {
@@ -78,7 +71,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 8.42,
     percentageChange: 23.75,
     lastTradeTime: '6:53:06pm',
-    volume: 1860,
     isActive: true
   },
   {
@@ -88,7 +80,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 22.15,
     percentageChange: 38.31,
     lastTradeTime: '6:52:46pm',
-    volume: 6270,
     isActive: false
   },
   {
@@ -98,7 +89,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 7.38,
     percentageChange: 4.14,
     lastTradeTime: '6:53:07pm',
-    volume: 8130,
     isActive: true
   },
   {
@@ -108,7 +98,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 137.19,
     percentageChange: 13.49,
     lastTradeTime: '6:53:07pm',
-    volume: 4570,
     isActive: true
   },
   {
@@ -118,7 +107,6 @@ export const MOCK_STOCK_DATA: StockData[] = [
     priceChange: 2.35,
     percentageChange: 9.05,
     lastTradeTime: '6:53:07pm',
-    volume: 5890,
     isActive: true
   }
 ];

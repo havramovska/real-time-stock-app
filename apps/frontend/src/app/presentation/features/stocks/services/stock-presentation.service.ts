@@ -33,7 +33,6 @@ export class StockPresentationService implements OnDestroy {
           open: stock.currentPrice,
           high: stock.currentPrice,
           low: stock.currentPrice,
-          volume: stock.volume,
           lastUpdated: new Date(stock.lastTradeTime)
         }));
 
@@ -59,6 +58,7 @@ export class StockPresentationService implements OnDestroy {
   }
 
   toggleStock(symbol: string, isActive: boolean): void {
+    this.stockStateService.toggleStock(symbol, isActive);
     this.stockWebSocketService.toggleStock(symbol, isActive);
   }
 
@@ -74,7 +74,9 @@ export class StockPresentationService implements OnDestroy {
 
   getStocksForUI(): Observable<any[]> {
     return this.stockStateService.getState().pipe(
-      map(state => this.stockPresentationAdapter.transformToUIStateList(state.stocks))
+      map(state => {
+        return this.stockPresentationAdapter.transformToUIStateList(state.stocks, state.activeStocks);
+      })
     );
   }
 

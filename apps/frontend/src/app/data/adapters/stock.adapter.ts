@@ -21,8 +21,7 @@ export class StockAdapter {
       currentPrice: apiResponse.currentPrice,
       priceChange: apiResponse.priceChange,
       percentageChange: apiResponse.percentageChange,
-      lastTradeTime: timestamp.toISOString(),
-      volume: apiResponse.volume || 0
+      lastTradeTime: timestamp.toISOString()
     };
   }
 

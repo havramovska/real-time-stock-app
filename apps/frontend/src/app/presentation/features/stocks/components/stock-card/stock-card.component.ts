@@ -2,7 +2,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormatPricePipe } from '../../../../shared/pipes/format-price.pipe';
 import { FormatPriceChangePipe } from '../../../../shared/pipes/format-price-change.pipe';
 import { FormatPercentagePipe } from '../../../../shared/pipes/format-percentage.pipe';
-import { FormatVolumePipe } from '../../../../shared/pipes/format-volume.pipe';
 import { PriceChangeClassPipe } from '../../../../shared/pipes/price-change-class.pipe';
 import { CardClassPipe } from '../../../../shared/pipes/card-class.pipe';
 import { FormatTradeTimePipe } from '../../../../shared/pipes/format-trade-time.pipe';
@@ -17,7 +16,6 @@ import { StockWithUIState as StockData, ToggleEvent } from '@real-time-stock-app
     FormatPricePipe,
     FormatPriceChangePipe,
     FormatPercentagePipe,
-    FormatVolumePipe,
     PriceChangeClassPipe,
     CardClassPipe,
     FormatTradeTimePipe

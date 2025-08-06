@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { ThemeService } from '../../../../core/services/theme.service';
 import { Theme } from '../../../../core/constants/theme.enum';
 
@@ -14,12 +16,11 @@ export class ThemeToggleComponent implements OnInit, OnDestroy {
   private themeService = inject(ThemeService);
   
   currentTheme$ = this.themeService.currentTheme$;
-  isDarkMode = false;
+  isDarkMode$: Observable<boolean> = this.currentTheme$.pipe(
+    map(theme => theme === Theme.DARK)
+  );
 
   ngOnInit(): void {
-    this.currentTheme$.subscribe(theme => {
-      this.isDarkMode = theme === Theme.DARK;
-    });
   }
 
   ngOnDestroy(): void {

@@ -1,13 +1,23 @@
 @use 'variables' as *;
+@use 'sass:color';
 
 .header {
   background-color: $header-bg-color;
   border-bottom: 1px solid $border-color;
-  padding: $spacing-md $spacing-lg;
+  padding: $spacing-md 0;
+  box-shadow: $shadow-sm;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: $shadow-sm;
 }
 
 .logo {
@@ -16,8 +26,12 @@
   color: $primary-color;
   text-decoration: none;
   
-  &:hover {
-    color: darken($primary-color, 10%);
+  .logo-text {
+    color: $primary-color;
+    
+    &:hover {
+      color: color.adjust($primary-color, $lightness: -10%);
+    }
   }
 }
 

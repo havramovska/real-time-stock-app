@@ -13,32 +13,28 @@ export class MockApiService implements StockApiService {
       currentPrice: 150.25,
       priceChange: 2.15,
       percentageChange: 1.45,
-      timestamp: Date.now() / 1000,
-      volume: 50000000
+      timestamp: Date.now() / 1000
     },
     {
       symbol: 'GOOGL',
       currentPrice: 2750.80,
       priceChange: -15.20,
       percentageChange: -0.55,
-      timestamp: Date.now() / 1000,
-      volume: 25000000
+      timestamp: Date.now() / 1000
     },
     {
       symbol: 'MSFT',
       currentPrice: 320.45,
       priceChange: 8.75,
       percentageChange: 2.81,
-      timestamp: Date.now() / 1000,
-      volume: 35000000
+      timestamp: Date.now() / 1000
     },
     {
       symbol: 'TSLA',
       currentPrice: 850.30,
       priceChange: 25.60,
       percentageChange: 3.10,
-      timestamp: Date.now() / 1000,
-      volume: 40000000
+      timestamp: Date.now() / 1000
     }
   ];
 
@@ -86,8 +82,7 @@ export class MockApiService implements StockApiService {
       currentPrice: 100 + Math.random() * 200,
       priceChange: (Math.random() - 0.5) * 10,
       percentageChange: (Math.random() - 0.5) * 5,
-      timestamp: Date.now() / 1000,
-      volume: 10000000 + Math.random() * 50000000
+      timestamp: Date.now() / 1000
     };
   }
 } 

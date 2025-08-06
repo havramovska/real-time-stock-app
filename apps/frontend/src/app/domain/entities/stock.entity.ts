@@ -7,7 +7,6 @@ export interface StockEntity {
   open: number;
   high: number;
   low: number;
-  volume: number;
   lastUpdated: Date;
 }
 
@@ -20,6 +19,5 @@ export interface StockQuote {
   open: number;
   high: number;
   low: number;
-  volume: number;
   lastUpdated: Date;
 } 

@@ -6,7 +6,7 @@ import { StockWithUIState } from '@real-time-stock-app/models';
   providedIn: 'root'
 })
 export class StockPresentationAdapter {
-  transformToUIState(stock: StockQuote): StockWithUIState {
+  transformToUIState(stock: StockQuote, activeStocks: Set<string>): StockWithUIState {
     return {
       symbol: stock.symbol,
       name: `${stock.symbol} Stock`,
@@ -14,12 +14,11 @@ export class StockPresentationAdapter {
       priceChange: stock.change,
       percentageChange: stock.changePercent,
       lastTradeTime: stock.lastUpdated.toISOString(),
-      volume: stock.volume,
-      isActive: true
+      isActive: activeStocks.has(stock.symbol)
     };
   }
 
-  transformToUIStateList(stocks: StockQuote[]): StockWithUIState[] {
-    return stocks.map(stock => this.transformToUIState(stock));
+  transformToUIStateList(stocks: StockQuote[], activeStocks: Set<string>): StockWithUIState[] {
+    return stocks.map(stock => this.transformToUIState(stock, activeStocks));
   }
 } 

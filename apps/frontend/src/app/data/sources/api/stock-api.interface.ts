@@ -7,7 +7,6 @@ export interface StockApiResponse {
   priceChange: number;
   percentageChange: number;
   timestamp: number;
-  volume?: number;
 }
 
 export interface StockApiService {
